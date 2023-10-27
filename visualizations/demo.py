@@ -129,7 +129,8 @@ if __name__ == "__main__":
                     out_filename = args.output
                 out_filename_rels = out_filename.replace('.png','')
                 out_filename_rels += '_rels.png'
-                visualized_output.save(out_filename)
+                # visualized_output.save(out_filename)
+                cv2.imwrite(out_filename, visualized_output.get_image())
                 visualized_output_relations.savefig(out_filename_rels, dpi=visualized_output_relations.dpi)
                 visualized_output_relations.clear()
                 del visualized_output_relations
